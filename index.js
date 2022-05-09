@@ -85,7 +85,8 @@ async function run(){
             const result = await userCOllection.deleteOne(query);
             res.send(result)
         })
-
+    
+// jwt implementation .................................
         app.get('/myproduct', verifuJWT,async (req,res)=>{
             const decodedEmail = req.decoded.email;
             
