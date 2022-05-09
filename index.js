@@ -6,7 +6,8 @@ require("dotenv").config();
 var jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const ObjectId = require('mongodb').ObjectId;
-//use middleware
+//use middleware//.......................
+
 app.use(cors());
 app.use(express.json());
 
