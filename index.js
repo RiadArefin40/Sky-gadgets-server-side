@@ -25,13 +25,8 @@ function verifuJWT(req,res,next){
         console.log('decoded',decoded);
         req.decoded = decoded;
     });
-    
- 
     next();
 }
-
-
-
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.foixi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
@@ -70,7 +65,6 @@ async function run(){
             const updateDoc = {
                 $set:{
                     quantity:updatedQuantity
-                    
                 }
             }
             const result = await userCOllection.updateOne(filter,updateDoc,options)
